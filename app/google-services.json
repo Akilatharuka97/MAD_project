@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "432585712507",
+    "project_id": "coco-toto-ac54f",
+    "storage_bucket": "coco-toto-ac54f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432585712507:android:9580ac8f3890f3da2a53de",
+        "android_client_info": {
+          "package_name": "com.example.cocototo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432585712507-32pplnpt70qohhsi0eubl5ac1nardkjo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-71vr1pDJJ4bkva8VQf9x8yzVY-ylzNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432585712507-32pplnpt70qohhsi0eubl5ac1nardkjo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
