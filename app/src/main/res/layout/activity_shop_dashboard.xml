@@ -35,6 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_name2" />
 
+
     <TextView
         android:id="@+id/dashboardusername"
         android:layout_width="wrap_content"
@@ -137,22 +138,13 @@
 
     <ImageView
         android:id="@+id/profilephoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="164dp"
+        android:layout_height="156dp"
         app:layout_constraintBottom_toTopOf="@+id/dashboardusername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
-
-    <TextView
-        android:id="@+id/profilebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Profile Photo"
-        android:textColor="#0425D3"
-        app:layout_constraintBottom_toBottomOf="@+id/profilephoto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/profilephoto" />
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:srcCompat="@drawable/_dc2ff0c_a424_4ddb_afa7_1873f47a312d" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

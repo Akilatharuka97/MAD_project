@@ -30,11 +30,11 @@ public class Shop_Dashboard extends AppCompatActivity {
 
     TextView ownername, shopname, telephone, address, email, description;
     FirebaseAuth fAuth;
-    TextView profileBTN;
+    //TextView profileBTN;
     ImageView profileImage;
     FirebaseFirestore fStore;
     String userID;
-    StorageReference storageReference;
+    //StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +47,9 @@ public class Shop_Dashboard extends AppCompatActivity {
         address      = findViewById(R.id.dashboardaddress);
         email        = findViewById(R.id.dashboardemail);
         description  = findViewById(R.id.dashboarddescription);
-        profileBTN   = findViewById(R.id.profilebtn);
+        //profileBTN   = findViewById(R.id.profilebtn);
         profileImage = findViewById(R.id.profilephoto);
-        storageReference = FirebaseStorage.getInstance().getReference();
+        //storageReference = FirebaseStorage.getInstance().getReference();
 
         fAuth        = FirebaseAuth.getInstance();
         fStore       = FirebaseFirestore.getInstance();
@@ -69,7 +69,7 @@ public class Shop_Dashboard extends AppCompatActivity {
             }
         });
 
-        profileBTN.setOnClickListener(new View.OnClickListener() {
+    /**    profileBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //open gallery
@@ -78,7 +78,7 @@ public class Shop_Dashboard extends AppCompatActivity {
             }
         });
 
-    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -107,10 +107,10 @@ public class Shop_Dashboard extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(Shop_Dashboard.this, "Image Upload Fail", Toast.LENGTH_SHORT).show();
             }
-        });
+        });}**/
     }
 
-    //commit
+
 
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
