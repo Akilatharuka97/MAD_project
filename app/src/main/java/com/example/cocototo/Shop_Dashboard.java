@@ -110,6 +110,8 @@ public class Shop_Dashboard extends AppCompatActivity {
         });
     }
 
+    //commit
+
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(),Shop_Login.class));
