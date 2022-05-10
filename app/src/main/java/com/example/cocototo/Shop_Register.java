@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -40,15 +39,15 @@ public class Shop_Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_register);
 
-        mOwnerName   = findViewById(R.id.ownername);
-        mAddress     = findViewById(R.id.address);
-        mTelephone   = findViewById(R.id.telephone);
-        mShopName    = findViewById(R.id.shopname);
-        mUsername    = findViewById(R.id.username);
+        mOwnerName   = findViewById(R.id.Profileownername);
+        mAddress     = findViewById(R.id.Profileaddress);
+        mTelephone   = findViewById(R.id.Profiletelephone);
+        mShopName    = findViewById(R.id.Profileshopname);
+        mUsername    = findViewById(R.id.Profileusername);
         mPassword    = findViewById(R.id.password);
-        mDescription = findViewById(R.id.desciption);
+        mDescription = findViewById(R.id.Profiledesciption);
 
-        mRegisterBtn = findViewById(R.id.reg_btn);
+        mRegisterBtn = findViewById(R.id.update_btn);
         mLoginBtn    = findViewById(R.id.new_here);
 
         fAuth        = FirebaseAuth.getInstance();

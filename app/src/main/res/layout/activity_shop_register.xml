@@ -53,7 +53,7 @@
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <EditText
-        android:id="@+id/ownername"
+        android:id="@+id/Profileownername"
         android:layout_width="383dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -74,7 +74,7 @@
         app:layout_constraintVertical_bias="0.060000002" />
 
     <EditText
-        android:id="@+id/address"
+        android:id="@+id/Profileaddress"
         android:layout_width="383dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -91,11 +91,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ownername"
+        app:layout_constraintTop_toBottomOf="@+id/Profileownername"
         app:layout_constraintVertical_bias="0.04000002" />
 
     <EditText
-        android:id="@+id/telephone"
+        android:id="@+id/Profiletelephone"
         android:layout_width="383dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -112,11 +112,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address"
+        app:layout_constraintTop_toBottomOf="@+id/Profileaddress"
         app:layout_constraintVertical_bias="0.050000012" />
 
     <EditText
-        android:id="@+id/shopname"
+        android:id="@+id/Profileshopname"
         android:layout_width="383dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -133,11 +133,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telephone"
+        app:layout_constraintTop_toBottomOf="@+id/Profiletelephone"
         app:layout_constraintVertical_bias="0.060000002" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/Profileusername"
         android:layout_width="383dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -154,7 +154,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shopname"
+        app:layout_constraintTop_toBottomOf="@+id/Profileshopname"
         app:layout_constraintVertical_bias="0.07999998" />
 
     <EditText
@@ -175,11 +175,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/Profileusername"
         app:layout_constraintVertical_bias="0.088" />
 
     <EditText
-        android:id="@+id/desciption"
+        android:id="@+id/Profiledesciption"
         android:layout_width="383dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -192,7 +192,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/reg_btn"
+        app:layout_constraintBottom_toTopOf="@+id/update_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -200,7 +200,7 @@
         app:layout_constraintVertical_bias="0.418" />
 
     <Button
-        android:id="@+id/reg_btn"
+        android:id="@+id/update_btn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#3A8A01"
@@ -227,7 +227,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reg_btn"
+        app:layout_constraintTop_toBottomOf="@+id/update_btn"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

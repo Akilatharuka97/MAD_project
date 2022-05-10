@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cocototo">
         <activity
+            android:name=".Recycle_View"
+            android:exported="false" />
+        <activity
             android:name=".Shop_Update"
             android:exported="false" />
         <activity

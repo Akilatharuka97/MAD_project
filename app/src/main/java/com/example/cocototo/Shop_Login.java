@@ -31,7 +31,7 @@ public class Shop_Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_login);
 
-        mUsername   = findViewById(R.id.username);
+        mUsername   = findViewById(R.id.Profileusername);
         mPassword   = findViewById(R.id.password);
 
         mLoginBtn   = findViewById(R.id.log_btn);

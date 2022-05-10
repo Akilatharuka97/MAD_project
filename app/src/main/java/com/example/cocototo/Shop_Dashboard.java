@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,16 +26,20 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Shop_Dashboard extends AppCompatActivity {
 
     TextView ownername, shopname, telephone, address, email, description;
     FirebaseAuth fAuth;
-    //TextView profileBTN;
-    ImageView profileImage;
+//  Button updateprofile;
     FirebaseFirestore fStore;
     String userID;
-    //StorageReference storageReference;
+    CircleImageView profileImageView;
+    TextView profileChangebtn;
+    StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +52,20 @@ public class Shop_Dashboard extends AppCompatActivity {
         address      = findViewById(R.id.dashboardaddress);
         email        = findViewById(R.id.dashboardemail);
         description  = findViewById(R.id.dashboarddescription);
-        //profileBTN   = findViewById(R.id.profilebtn);
-        profileImage = findViewById(R.id.profilephoto);
-        //storageReference = FirebaseStorage.getInstance().getReference();
-
+        profileChangebtn   = findViewById(R.id.change_profile_btn);
+        profileImageView = findViewById(R.id.profile_image);
         fAuth        = FirebaseAuth.getInstance();
         fStore       = FirebaseFirestore.getInstance();
+
+        storageReference = FirebaseStorage.getInstance().getReference();
+
+        StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
+        profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).into(profileImageView);
+            }
+        });
 
         userID       = fAuth.getCurrentUser().getUid();
 
@@ -69,49 +82,48 @@ public class Shop_Dashboard extends AppCompatActivity {
             }
         });
 
-    /**    profileBTN.setOnClickListener(new View.OnClickListener() {
+        profileChangebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //open gallery
                 Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(openGalleryIntent,1000 );
+                startActivityForResult(openGalleryIntent,1000);
             }
         });
-
-
+    }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @androidx.annotation.Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 1000){
-            if(resultCode == Activity.RESULT_OK){
+        if (requestCode == 1000){
+            if (resultCode == Activity.RESULT_OK){
                 Uri imageUri = data.getData();
-                profileImage.setImageURI(imageUri);
+                //profileImageView.setImageURI(imageUri);
 
                 uploadImageToFirebase(imageUri);
-
             }
         }
     }
 
     private void uploadImageToFirebase(Uri imageUri) {
-        //upload image to firebase storage
-        StorageReference fileRef = storageReference.child("profile.jpg");
+        //Upload Image to firebase storage
+        final StorageReference fileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
         fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Toast.makeText(Shop_Dashboard.this, "Image Uploaded", Toast.LENGTH_SHORT).show();
+                fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Picasso.get().load(uri).into(profileImageView);
+                    }
+                });
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(Shop_Dashboard.this, "Image Upload Fail", Toast.LENGTH_SHORT).show();
             }
-        });}
-     **/
+        });
     }
-
-
 
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
