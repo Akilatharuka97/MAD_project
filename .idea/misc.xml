@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Akila/AndroidStudioProjects/cocototo/app/src/main/res/layout/activity_main.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/Akila/AndroidStudioProjects/cocototo/app/src/main/res/layout/activity_recycle_view.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/Akila/AndroidStudioProjects/cocototo/app/src/main/res/layout/activity_shop_dashboard.xml" value="0.264" />
         <entry key="..\:/Users/Akila/AndroidStudioProjects/cocototo/app/src/main/res/layout/activity_shop_login.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/Akila/AndroidStudioProjects/cocototo/app/src/main/res/layout/activity_shop_register.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/Akila/AndroidStudioProjects/cocototo/app/src/main/res/layout/activity_shop_update.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/Akila/AndroidStudioProjects/cocototo/app/src/main/res/layout/item.xml" value="0.24547101449275363" />
       </map>
     </option>
   </component>
