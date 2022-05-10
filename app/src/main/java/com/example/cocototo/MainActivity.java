@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Shop_Register.class);
+                Intent intent = new Intent(MainActivity.this, Recycle_View.class);
                 startActivity(intent);
                 finish();
             }
